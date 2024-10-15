@@ -1,0 +1,74 @@
+# Исключения для ОС
+.DS_Store
+Thumbs.db
+
+# Логи
+*.log
+*.log.*
+
+# Среды виртуальных окружений
+venv/
+env/
+ENV/
+.venv/
+.pyenv/
+
+# Файлы кэша Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Конфигурационные файлы и файлы настроек среды
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Конфигурационные файлы PyCharm
+# Рабочие каталоги и файлы, которые не нужно хранить в репозитории
+.idea/*
+!.idea/inspectionProfiles
+!.idea/*.xml
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/workspace.xml
+!.idea/vcs.xml
+!.idea/encodings.xml
+
+# База данных для файлов Jupyter
+.ipynb_checkpoints/
+
+# Базы данных SQLite
+*.sqlite3
+
+# Тестовые покрытия
+htmlcov/
+.tox/
+.nox/
+
+# Логи тестирования
+coverage.xml
+*.cover
+*.py,cover
+
+# Инструменты сборки
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+MANIFEST
+
+# Файлы pipenv, poetry
+Pipfile.lock
+poetry.lock
+
+# Файлы и каталоги контейнеризации
+docker-compose*.yml
+Dockerfile
+.env
+.env.*
+
+# Файлы редактора Vim
+*.swp
+*.swo
