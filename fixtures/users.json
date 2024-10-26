@@ -1,0 +1,20 @@
+[
+{
+    "model": "user.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$wltkxwBP0yR0rG3LdHkcX9$yfDMyGDGEXDnl+oPJH3+/UvLOOfdwv7z3cv+MprnEGk=",
+        "last_login": "2024-10-26T17:48:08.507Z",
+        "is_superuser": true,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-10-15T14:50:56.710Z",
+        "email": "severskwladimir@gmail.com",
+        "username": "admin",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

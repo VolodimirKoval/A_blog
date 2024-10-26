@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+	<h1>Welcome to my Blog.</h1>
+    {% if tag %}
+    	<h2>Posts tagged by {{ tag.name }}</h2>
+    {% endif %}
+    {% for post in posts %}
+        <h2>
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </h2>
+        {% if post.tag.count > 0 %}
+            Tags:
+            {% for tag in post.tag.all %}
+            	<a href="{% url 'blog:post_list_by_tag' tag.slug %}">{{ tag.name }}</a>
+                {% if not forloop.last %}, {% endif %}
+            {% endfor %}
+            
+        {% else %}
+            <p class="tags">No tag`s yet</p>
+        {% endif %}
+        <p class="date">
+            Published on {{ post.publish}} by {{ post.author.username }}
+        </p>
+        {{ post.body|truncatechars_html:50|linebreaks }}
+    {% endfor %}
+    {% include 'pagination.html' with page=posts %}
+{% endblock content %}
